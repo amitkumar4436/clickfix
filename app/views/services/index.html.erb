@@ -1,0 +1,12 @@
+<h1>ClickFix Services</h1>
+
+<ul id="services">
+
+	<% @services.each do |service| %>
+		<li>
+			<%= link_to service.name, service_path(service) %>
+		</li>
+	<%end%>
+</ul>
+
+<%= link_to "Create new services" ,  new_service_path, class: "new_service" %>

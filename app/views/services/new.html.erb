@@ -1,0 +1,28 @@
+<h1> Create new Service </h1>
+
+<%= form_for(@service) do |f| %>
+  <ul>
+  <% @service.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :min_price %><br />
+    <%= f.text_field :min_price%>
+  </p>
+  <p>
+    <%= f.label :max_price %><br />
+    <%= f.text_field :max_price %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
