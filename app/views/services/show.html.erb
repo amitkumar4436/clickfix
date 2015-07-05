@@ -2,4 +2,7 @@
 <p><%= @service.description %> </p>
 <p><%= @service.min_price %> </p>
 <p> <%= @service.max_price %> </p>
+<p>
+	<%= link_to "Order Now", new_order_path(service_id: @service.id) %>
+</p>
 <%= link_to "<<Back to All Service", services_path %>

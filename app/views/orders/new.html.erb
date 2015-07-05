@@ -1,0 +1,28 @@
+<%= form_for @order do |f| %>
+
+	<div class="group">
+		<%= f.text_field :name, placeholder: "You name" %>
+	</div>
+
+	<div class="group">
+		<%= f.text_field :email, placeholder: "You email" %>
+	</div>
+
+	<div class="group">
+		<%= f.text_area :address, placeholder: "You address" %>
+	</div>
+
+	<div class="group">
+		<%= f.text_field :phone_number, placeholder: "Your phone" %>
+	</div>
+
+	<div class="group">
+		<%= f.text_field :date, placeholder: "yyyy-mm-dd" %>
+	</div>
+
+	<div class="group">
+		<%= f.number_field :service_id %>
+	</div>
+
+	<%= f.submit "Place Order" %>
+<% end %>

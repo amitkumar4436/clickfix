@@ -5,6 +5,7 @@
 	<% @services.each do |service| %>
 		<li>
 			<%= link_to service.name, service_path(service) %>
+			<%= link_to "Order Now", new_order_path(service_id: service.id) %>
 		</li>
 	<%end%>
 </ul>
